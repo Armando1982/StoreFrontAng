@@ -1,0 +1,28 @@
+<div class="card-container">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Register</mat-card-title>
+          <mat-card-subtitle>Input Data</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="form-custom"[formGroup]="formRegister">
+                <mat-form-field class="input-custom">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name">
+                  </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                  </mat-form-field>
+                  <mat-form-field class="input-custom">
+                    <mat-label>Pasword</mat-label>
+                    <input matInput formControlName="password" type="password">
+                  </mat-form-field>
+                  <div class="flex">
+                    <button mat-flat-button color="primary" (click)="register()">Register</button>
+                    <button mat-flat-button color="warn" (click)="back()">Back</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>
